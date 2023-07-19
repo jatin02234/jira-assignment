@@ -82,7 +82,7 @@ export class DashboardComponent implements OnInit {
   getIssueData() {
     this.commonService.getIssueData().pipe(takeUntil(this.ngUnsubscribe)).subscribe((resData: any) => {
       resData.forEach((res: any) => {
-        if (res['isActive'] || this.activeSprint.sprintTitle == res.sprintName) {
+        if (res['isActive'] || (this.activeSprint?.sprintTitle == res?.sprintName && !!this.activeSprint?.sprintTitle)) {
           res['isActive'] = true;
           this.activeSprintList.push(res);
         } else if (res['isFutureSprint'] || (!res?.sprintName && !res['isBackLog'])) {
@@ -108,8 +108,8 @@ export class DashboardComponent implements OnInit {
     this.isAddNewModalShown = '';
   }
 
-  toggleTextArea() {
-    this.description = ''
+  toggleTextArea(data:any) {
+    this.description = data;
     this.textAreaVisible = !this.textAreaVisible;
   }
 
@@ -154,5 +154,10 @@ export class DashboardComponent implements OnInit {
       this.isLoding = false;
     }, 1000);
 
+  }
+
+  onDestroy() {
+    this.ngUnsubscribe.next(true);
+    this.ngUnsubscribe.complete();
   }
 }

@@ -7,7 +7,7 @@ export class AuthService {
 
   constructor() { }
 
-  login() {
+  login(): boolean | any {
     if (localStorage.getItem('Login')) {
       return true;
     }

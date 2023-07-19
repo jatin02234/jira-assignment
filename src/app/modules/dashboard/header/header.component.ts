@@ -15,8 +15,10 @@ export class HeaderComponent implements OnInit {
   issueRef!: BsModalRef;
   sprintRef!: BsModalRef;
   getUser: any;
+  isUserInfoSown=false;
   button: any;
   ismodalLoading: boolean = false;
+  userData = JSON.parse(localStorage.getItem('Login') as any);
   @ViewChild('sprint', { static: true }) sprint!: TemplateRef<any>;
   @ViewChild('issue', { static: true }) issue!: TemplateRef<any>;
 

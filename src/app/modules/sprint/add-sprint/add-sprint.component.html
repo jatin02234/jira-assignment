@@ -28,7 +28,7 @@
       </div>
 
       <div class="form-group">
-        <label for="">Start time</label>
+        <label for="">Start Date</label>
         <input type="date" class="form-control" formControlName="startTime" />
         <div
           *ngIf="
@@ -37,12 +37,12 @@
           "
           class="text-danger"
         >
-          Start time is required
+          Start Date is required
         </div>
       </div>
       <div class="form-group">
-        <label for="">End time</label>
-        <input type="date" class="form-control" formControlName="endTime" />
+        <label for="">End Date</label>
+        <input type="date" class="form-control" [min]="sprintForm.controls['startTime'].value" formControlName="endTime" />
         <div
           *ngIf="
             sprintForm.get('endTime')?.invalid &&
@@ -50,24 +50,7 @@
           "
           class="text-danger"
         >
-          End time is required
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Description</label>
-        <textarea
-          class="text-box form-control"
-          placeholder="Description"
-          formControlName="description"
-        ></textarea>
-        <div
-          *ngIf="
-            sprintForm.get('description')?.invalid &&
-            sprintForm.get('description')?.touched
-          "
-          class="text-danger"
-        >
-          Description is required
+          End Date is required
         </div>
       </div>
       <div class="form-check d-flex">

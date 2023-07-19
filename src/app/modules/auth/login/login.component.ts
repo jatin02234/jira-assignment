@@ -20,9 +20,13 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private service: CommonService) { }
 
   ngOnInit(): void {
+    if(!!localStorage.getItem('Login')) {
+      this.router.navigate(['/dashboard'])
+      return;
+    }
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')]),
-      password: new FormControl('', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')])
+      email: new FormControl('admin123@gmail.com', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')]),
+      password: new FormControl('Admin123@', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')])
     })
   }
 

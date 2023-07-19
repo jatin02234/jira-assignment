@@ -13,7 +13,7 @@ export class AddSprintComponent implements OnInit {
   isStatusDisabled = true;
   activeSprintData: any;
 
-  constructor(private commonService: CommonService, private readonly bsModalRef: BsModalRef) {}
+  constructor(private commonService: CommonService, private readonly bsModalRef: BsModalRef) { }
 
   ngOnInit() {
     this.getSprintData();
@@ -28,8 +28,7 @@ export class AddSprintComponent implements OnInit {
       sprintId: new FormControl(Math.floor(Math.random() * 100)),
       isFutureSprint: new FormControl(false),
       isActive: new FormControl(false),
-      status: new FormControl(''),
-      description: new FormControl('')
+      status: new FormControl('', Validators.required),
     });
   }
 
@@ -46,8 +45,11 @@ export class AddSprintComponent implements OnInit {
   }
 
   getSprintData() {
-    this.commonService.getSprintData().subscribe((res: any) =>{
+    this.commonService.getSprintData().subscribe((res: any) => {
       this.activeSprintData = res.find((res: any) => res.status == 'Active');
+      if (!!this.activeSprintData) {
+        this.sprintForm.controls['status'].setValue('future')
+      }
     })
   }
 }

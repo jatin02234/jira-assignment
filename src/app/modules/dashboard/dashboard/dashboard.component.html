@@ -1,14 +1,17 @@
 <div class="row m-0">
+  <div class="header-wrapper">
+    <app-header></app-header>
+  </div>
   <div class="col-sm-3 border">
     <app-left-side-bar></app-left-side-bar>
   </div>
   <div class="col-sm-6 border">
     <div class="container">
-      <div class="row col-md-12 mt-5">
+      <div class="row col-md-12 mt-5" *ngIf="!!activeSprintList">
         <div class="offset-1"></div>
         <div>
           <div
-            class="card task-list-container"
+            class="card task-list-container mb-3"
             cdkDropList
             id="active_sprint"
             #wip="cdkDropList"
@@ -20,8 +23,8 @@
             ]"
             (cdkDropListDropped)="drop($event)"
           >
-            <div class="card-title m-3 task-title-wrapper">Active Sprint ({{activeSprint?.sprintTitle}})</div>
-            <div
+            <div class="card-title m-3 task-title-wrapper"><strong>Active Sprint:- </strong> {{activeSprint?.sprintTitle}}</div>
+            <div 
               class="card my-3 mx-3 d-flex todolist-wrapper"
               *ngFor="let item of activeSprintList; let i=index"
               cdkDrag
@@ -32,7 +35,7 @@
                     class="card-header"
                     role="tab"
                     id="headingOne"
-                    (click)="isCollapse = i"
+                    (click)="isCollapse = i; textAreaVisible=true"
                   >
                     <div class="mb-0">
                       <div
@@ -44,8 +47,7 @@
                         class="collapsed"
                       >
                         <h4>
-                          {{ item?.issueTitle
-                          }}<em
+                          DP:- {{ item?.issueId }} ({{item?.issueTitle}})<em
                             class="fa fa-angle-down text-small"
                             aria-hidden="true"
                           ></em>
@@ -62,16 +64,17 @@
                     [ngClass]="isCollapse == i ? 'show' : ''"
                     aria-expanded="false"
                   >
-                    <div class="card-block">
+                    <div class="card-block p-3">
                       <em
                         [ngClass]="{
                           'bi bi-pencil-fill icon ': textAreaVisible,
                           'bi bi-x icon-x ': !textAreaVisible
                         }"
-                        (click)="toggleTextArea()"
+                        (click)="toggleTextArea(item?.description)"
                       ></em>
 
                       <ng-template [ngIf]="textAreaVisible">
+                        <p>Description:-</p>
                         <span class="m-2">{{ item?.description }}</span>
                       </ng-template>
                       <ng-container *ngIf="!textAreaVisible">
@@ -162,7 +165,7 @@
           cdkDrag
           (click)="selectedSprint = item"
         >
-          {{ item?.issueTitle }}
+        DP:- {{ item?.issueId }}( {{item?.issueTitle}})
         </div>
       </div>
     </div>
@@ -189,7 +192,7 @@
           cdkDrag
           (click)="selectedSprint = item"
         >
-          {{ item?.issueTitle }}
+          DP:- {{ item?.issueId }}( {{item?.issueTitle}})
         </div>
       </div>
     </div>

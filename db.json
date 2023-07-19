@@ -1,0 +1,220 @@
+{
+  "sprintData": [
+    {
+      "sprintTitle": "Active test",
+      "startTime": "2023-07-01",
+      "endTime": "2023-07-15",
+      "sprintId": 98,
+      "isFutureSprint": false,
+      "isActive": false,
+      "status": "Active",
+      "description": "",
+      "isCollapse": false,
+      "id": 1
+    },
+    {
+      "sprintTitle": "test",
+      "startTime": "2023-07-13",
+      "endTime": "2023-07-23",
+      "sprintId": 54,
+      "isFutureSprint": false,
+      "isActive": false,
+      "status": "",
+      "description": "",
+      "isCollapse": false,
+      "id": 2
+    },
+    {
+      "sprintTitle": "test 2",
+      "startTime": "2023-07-02",
+      "endTime": "2023-07-29",
+      "sprintId": 78,
+      "isFutureSprint": false,
+      "isActive": false,
+      "status": "future",
+      "description": "",
+      "isCollapse": false,
+      "id": 3
+    },
+    {
+      "sprintTitle": "Business",
+      "startTime": "2023-07-05",
+      "endTime": "2023-07-21",
+      "sprintId": 98,
+      "isFutureSprint": false,
+      "isActive": false,
+      "status": "future",
+      "isCollapse": false,
+      "id": 4
+    },
+    {
+      "sprintTitle": "FUTURE sprint for test",
+      "startTime": "2023-07-19",
+      "endTime": "2023-07-22",
+      "sprintId": 87,
+      "isFutureSprint": false,
+      "isActive": false,
+      "status": "future",
+      "isCollapse": false,
+      "id": 5
+    }
+  ],
+  "issueData": [
+    {
+      "issueTitle": "globle issue",
+      "description": "fixed this\n",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "test",
+      "issueId": 50067,
+      "id": 1
+    },
+    {
+      "issueTitle": "First issue",
+      "description": "dropdown issue",
+      "isFuture": false,
+      "isActive": true,
+      "isBackLog": false,
+      "sprintName": "Active test",
+      "issueId": 50063,
+      "id": 2,
+      "isFutureSprint": false
+    },
+    {
+      "issueTitle": "future issue",
+      "description": "There is no such thing as $scope anymore as it existed in AngularJS. Its been replaced with member variables from the component class.",
+      "isFuture": false,
+      "isActive": true,
+      "isBackLog": false,
+      "issueId": 50044,
+      "id": 3,
+      "isFutureSprint": false,
+      "sprintName": "Active test"
+    },
+    {
+      "issueTitle": "drag-drop",
+      "description": "There is no such thing as $scope anymore as it existed in AngularJS. Its been replaced with member variables from the component class.",
+      "isFuture": false,
+      "isActive": true,
+      "isBackLog": false,
+      "issueId": 50060,
+      "id": 4,
+      "isFutureSprint": false,
+      "sprintName": "Active test"
+    },
+    {
+      "issueTitle": "FUTURE",
+      "description": "FUTURE ISSUE",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": true,
+      "issueId": 50082,
+      "id": 5,
+      "isFutureSprint": false,
+      "sprintName": ""
+    },
+    {
+      "issueTitle": "latest with future",
+      "description": "Add another issue",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": true,
+      "issueId": 50068,
+      "id": 6,
+      "isFutureSprint": false,
+      "sprintName": ""
+    },
+    {
+      "issueTitle": "Test 2 issues",
+      "description": "please fixe this issue",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "test 2",
+      "issueId": 50069,
+      "id": 7
+    },
+    {
+      "issueTitle": "Business Issue",
+      "description": "Fixed this one also",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "Business",
+      "issueId": 50014,
+      "id": 8
+    },
+    {
+      "issueTitle": "New issue reaised",
+      "description": "Its a priority task",
+      "sprintName": "",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": true,
+      "issueId": 50031,
+      "id": 9,
+      "isFutureSprint": false
+    },
+    {
+      "issueTitle": "Future issue for new sprint",
+      "description": "Duplicate issue ",
+      "isFuture": false,
+      "isActive": true,
+      "isBackLog": false,
+      "issueId": 50074,
+      "id": 10,
+      "isFutureSprint": false,
+      "sprintName": "Active test"
+    },
+    {
+      "issueTitle": "new issue (Tag)",
+      "description": "resolved",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "test",
+      "issueId": 50009,
+      "id": 11
+    },
+    {
+      "issueTitle": "Future issue",
+      "description": "Please fixed the issue",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "FUTURE sprint for test",
+      "issueId": 50059,
+      "id": 12
+    },
+    {
+      "issueTitle": "Perticualr sprint issue",
+      "description": "test issue ",
+      "sprintName": "test",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "issueId": 50040,
+      "id": 13
+    },
+    {
+      "issueTitle": "Active sprint issue",
+      "description": "Active sprint issue",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "sprintName": "Active test",
+      "issueId": 50010,
+      "id": 14
+    },
+    {
+      "issueTitle": "Future form backlog",
+      "description": "future",
+      "isFuture": false,
+      "isActive": false,
+      "isBackLog": false,
+      "issueId": 50060,
+      "id": 15
+    }
+  ]
+}

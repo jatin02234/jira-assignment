@@ -7,13 +7,11 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SprintModule } from './modules/sprint/sprint.module';
 import { BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
-import { HeaderComponent } from './layout/header/header.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +19,6 @@ import { CommonModule } from '@angular/common';
     AuthModule,
     SprintModule,
     AppRoutingModule,
-    DashboardModule,
     HttpClientModule,
     ModalModule.forRoot()
   ],
